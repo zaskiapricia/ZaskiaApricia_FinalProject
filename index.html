@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>UTS Pemrograman Web</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+ <!-- HOME -->
+<section id="home">
+  <header class="banner">
+    <div class="banner-content">
+      <img src="gambar/upn.PNG" alt="Logo UPN" class="logo-upn">
+      <h2>
+        Sistem Pustaka Digital Ilmu Komputer<br>
+        Universitas Pembangunan Nasional Veteran Jakarta
+      </h2>
+    </div>
+  </header>
+  <div class="home-content">
+    <div class="text-box">
+      <h1>Selamat Datang pada Sistem Pustaka Digital</h1>
+      <h2><span class="highlight">Fakultas Ilmu Komputer</span> UPN Veteran Jakarta</h2>
+      <p>Sistem ini untuk sebagai tolak ukur pemahaman diri saya terhadap materi pemrograman web sistem informasi.</p>
+      <button id="btnMulai">Mulai Melakukan Pengisian</button>
+      <button id="btnDataDiri">Daftar Diri</button>
+    </div>
+    <div class="img-box">
+      <img src="gambar/fik.jpeg" alt="Fakultas Ilmu Komputer">
+    </div>
+  </div>
+</section>
+
+  <!-- FORM -->
+  <section id="formSection" style="display:none;">
+    <h2>Form Sistem Referensi Digital</h2>
+    <form id="formUtama">
+      <input type="text" id="nim" placeholder="NIM"><br>
+      <input type="text" id="nama" placeholder="Nama Mahasiswa"><br>
+      <input type="number" id="semester" placeholder="Semester"><br>
+
+      <select id="jenis">
+        <option value="">-- Pilih Jenis Penelitian --</option>
+        <option value="paper">Paper</option>
+        <option value="buku">Buku</option>
+        <option value="pengabdian">Jurnal Pengabdian</option>
+      </select>
+
+      <!-- Subform Paper -->
+      <div id="formPaper" class="subForm">
+        <h3>Paper</h3>
+        <input type="text" id="penulisPaper" placeholder="Nama Penulis"><br>
+        <input type="text" id="judulPaper" placeholder="Judul Paper"><br>
+        <input type="number" id="tahunPaper" placeholder="Tahun Publikasi"><br>
+        <input type="text" id="volumePaper" placeholder="Volume, Edisi, Halaman"><br>
+        <input type="text" id="doiPaper" placeholder="DOI"><br>
+      </div>
+
+      <!-- Subform Buku -->
+      <div id="formBuku" class="subForm">
+        <h3>Buku</h3>
+        <input type="text" id="penulisBuku" placeholder="Nama Penulis Buku"><br>
+        <input type="text" id="judulBuku" placeholder="Judul Buku"><br>
+        <input type="number" id="tahunBuku" placeholder="Tahun Publikasi Buku"><br>
+        <input type="text" id="volumeBuku" placeholder="Volume, Edisi, Halaman"><br>
+        <input type="text" id="isbnBuku" placeholder="ISBN"><br>
+      </div>
+
+      <!-- Subform Jurnal Pengabdian -->
+      <div id="formPengabdian" class="subForm">
+        <h3>Jurnal Pengabdian</h3>
+        <input type="text" id="judulPengabdian" placeholder="Judul Jurnal Pengabdian"><br>
+        <input type="text" id="lokasiPengabdian" placeholder="Lokasi"><br>
+        <input type="number" id="tahunPengabdian" placeholder="Tahun"><br>
+        <input type="text" id="partnerPengabdian" placeholder="Mitra/Partner"><br>
+      </div>
+
+      <button type="submit">Submit</button>
+      <button type="button" id="btnKembaliHome">Kembali ke Home</button>
+    </form>
+  </section>
+
+  <!-- HASIL -->
+  <section id="hasilSection" style="display:none;">
+    <div class="hasil-header">
+      <h3>Hasil Pengisian Daftar Pustaka Mahasiswa</h3>
+      <div class="hasil-logo">
+        <span>UPN Veteran Jakarta</span>
+        <img src="gambar/upn.PNG" alt="Logo UPN" class="logo-upn">
+      </div>
+    </div>
+    <div class="hasil-content" id="hasilOutput">
+      <!-- Data hasil input ditampilkan lewat JS -->
+    </div>
+    <button type="button" id="btnKembaliForm">Kembali</button>
+  </section>
+
+  <!-- POPUP DATA DIRI -->
+  <div id="popupDataDiri" class="popup">
+    <div class="popup-content">
+      <h2>Data Diri</h2>
+      <p>Nama: Zaskia Apricia</p>
+      <p>NIM: 202301234</p>
+      <p>Program Studi: Sistem Informasi</p>
+      <button class="closePopup">Kembali</button>
+    </div>
+  </div>
+</body>
+</html>
+
